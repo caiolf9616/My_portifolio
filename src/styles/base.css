@@ -1,0 +1,58 @@
+/* Reset simples + estilos globais do documento */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: -apple-system, "SF Pro Display", "Segoe UI", Inter, system-ui, sans-serif;
+  transition: background 0.5s ease, color 0.5s ease;
+  overflow-x: hidden;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.section {
+  padding: 60px 24px 100px;
+}
+
+.section-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: clamp(26px, 4vw, 36px);
+  font-weight: 700;
+  margin: 0 0 28px;
+}
+
+.body-text {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  max-width: 60ch;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}

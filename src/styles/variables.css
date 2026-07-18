@@ -1,0 +1,37 @@
+/*
+  Aqui moram as CORES do site. Trocar de tema (claro/escuro) é só trocar
+  o valor dessas variáveis — o resto do CSS nunca muda, só referencia
+  var(--nome-da-variavel).
+
+  Como funciona: o React (veja src/hooks/useTheme.js) coloca o atributo
+  data-theme="dark" ou data-theme="light" na tag <html>. O bloco certo
+  abaixo "vence" automaticamente.
+*/
+
+:root,
+[data-theme="dark"] {
+  --bg-primary: #05070d;
+  --bg-secondary: #0a0e18;
+  --glass-bg: rgba(255, 255, 255, 0.055);
+  --glass-bg-strong: rgba(255, 255, 255, 0.09);
+  --glass-border: rgba(255, 255, 255, 0.14);
+  --glass-shadow: rgba(0, 0, 0, 0.45);
+  --text-primary: #eef2f7;
+  --text-secondary: #8b95a7;
+  --blob-opacity: 0.55;
+  --noise-opacity: 0.03;
+  --water-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 45%, #f472b6 100%);
+}
+
+[data-theme="light"] {
+  --bg-primary: #eef1f6;
+  --bg-secondary: #e3e8f0;
+  --glass-bg: rgba(255, 255, 255, 0.45);
+  --glass-bg-strong: rgba(255, 255, 255, 0.68);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-shadow: rgba(148, 163, 184, 0.35);
+  --text-primary: #0f1520;
+  --text-secondary: #5b6472;
+  --blob-opacity: 0.35;
+  --noise-opacity: 0.02;
+}

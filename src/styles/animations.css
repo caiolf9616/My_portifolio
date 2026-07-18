@@ -1,0 +1,38 @@
+/* Animações compartilhadas: blobs de fundo + fade-in ao rolar a página */
+
+@keyframes drift-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(4vw, 6vw) scale(1.08); }
+}
+@keyframes drift-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-5vw, -4vw) scale(1.1); }
+}
+@keyframes drift-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-3vw, 4vw) scale(0.92); }
+}
+
+/*
+  Scroll-reveal: todo elemento com className="reveal" começa invisível
+  e um pouco deslocado para baixo. O hook useRevealOnScroll (veja
+  src/hooks/useRevealOnScroll.js) adiciona a classe "visible" quando o
+  elemento entra na tela, o que dispara esta transição.
+*/
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}

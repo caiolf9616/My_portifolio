@@ -1,0 +1,54 @@
+.ambient {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  --mx: 0;
+  --my: 0;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: var(--blob-opacity);
+  background: var(--water-gradient);
+  transition: opacity 0.5s ease;
+  will-change: transform;
+}
+
+.blob-1 {
+  width: 46vw;
+  height: 46vw;
+  top: -12vw;
+  left: -8vw;
+  animation: drift-1 22s ease-in-out infinite;
+  transform: translate(calc(var(--mx) * 18px), calc(var(--my) * 18px));
+}
+
+.blob-2 {
+  width: 38vw;
+  height: 38vw;
+  bottom: -14vw;
+  right: -6vw;
+  animation: drift-2 26s ease-in-out infinite;
+  transform: translate(calc(var(--mx) * -14px), calc(var(--my) * -14px));
+}
+
+.blob-3 {
+  width: 26vw;
+  height: 26vw;
+  top: 38%;
+  left: 55%;
+  animation: drift-3 18s ease-in-out infinite;
+  opacity: calc(var(--blob-opacity) * 0.7);
+}
+
+.noise {
+  position: absolute;
+  inset: 0;
+  opacity: var(--noise-opacity);
+  background-image: radial-gradient(circle, #fff 1px, transparent 1px);
+  background-size: 3px 3px;
+}

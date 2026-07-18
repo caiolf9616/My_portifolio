@@ -1,0 +1,13 @@
+/* Regras de responsividade centralizadas — fácil de achar tudo num lugar só */
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .menu-btn { display: flex; }
+
+  .about-grid { grid-template-columns: 1fr; }
+  .avatar-frame { max-width: 160px; margin: 0 auto; }
+
+  .projects-grid { grid-template-columns: 1fr; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+}
