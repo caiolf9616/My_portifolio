@@ -12,7 +12,7 @@ export const PROFILE = {
   email: "caiolopes0816@gmail.com",
   github: "https://github.com/caiolf9616",
   linkedin: "https://www.linkedin.com/in/caio-lopes-794662293/",
-  photo:"/public/Avatar.jpg.jpeg",
+  photo: "/avatar.jpg",
   languages: ["Português(Nativo)", "Inglês(Avançado)", "Espanhol(Intermediário)"],
 };
 
